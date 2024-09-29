@@ -2,8 +2,10 @@ const express = require('express')
 const app = express()
 app.listen(7777)
 
-// uesr-demo 소환
 const bookRouter = require('./routes/books')
+const userRouter = require('./routes/users')
 
-// Router 실행
-app.use("/books",bookRouter)
+
+app.use("/books", bookRouter)
+app.use("/", userRouter)
+
